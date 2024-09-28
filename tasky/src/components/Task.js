@@ -7,6 +7,7 @@ const Task = (props) => {
             <p>Due: {props.deadline}</p>
             <p>{props.children}</p>
             <button onClick={props.markDone} className='doneButton'>Done</button>
+            <button className='deleteButton' onClick={props.deleteTask}>Delete</button>
         </div>
     )
 }
