@@ -91,19 +91,22 @@ form {
   margin: auto;
 }
 
+.priority-badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px; 
+}
+
 .priority-high {
-  color: red;
+  background-color: red;
 }
 
 .priority-medium {
-  color: orange;
+  background-color: orange;
 }
 
 .priority-low {
-  color: green;
-}
-
-/* Add a new class for the priority area */
-.priority-container {
-  margin-top: 10px; /* Add some space above the priority text */
+  background-color: green;
 }

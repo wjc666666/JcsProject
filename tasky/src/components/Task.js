@@ -4,11 +4,11 @@ const Task = (props) => {
   const getPriorityClass = () => {
     switch (props.priority) {
       case 'High':
-        return 'priority-high';
+        return 'priority-badge priority-high';
       case 'Medium':
-        return 'priority-medium';
+        return 'priority-badge priority-medium';
       case 'Low':
-        return 'priority-low';
+        return 'priority-badge priority-low';
       default:
         return '';
     }
@@ -19,8 +19,9 @@ const Task = (props) => {
       <h3 className="title">{props.title}</h3>
       <p>Due: {props.deadline}</p>
       <p>Details: {props.description}</p>
-      <div className="priority-container">
-        <p className={getPriorityClass()}>{props.priority}</p>
+      {/* Priority Badge */}
+      <div className={getPriorityClass()}>
+        <p>{props.priority}</p>
       </div>
       <button onClick={props.markDone} className='doneButton'>Done</button>
       <button className='deleteButton' onClick={props.deleteTask}>Delete</button>
